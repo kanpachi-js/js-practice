@@ -8,9 +8,9 @@
         console.log("芦部のpushですわよ");
         document.body.appendChild(para);
       }
-      
+
       const buttons = document.querySelectorAll('button');
-      
+
       for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', createParagraph);
       }
@@ -21,6 +21,18 @@
     <title>Apply JavaScript example</title>
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <div id="test">
+      <p>{{message}}</p>
+    </div>
     <button>Click me</button>
+    <script>
+      new Vue({
+        el: '#test',
+        data: {
+          message: 'アシベ'
+        }
+      })
+    </script>
   </body>
 </html>
